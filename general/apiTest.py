@@ -1,6 +1,8 @@
 import requests
 import xlrd
 
+print("hello world")
+
 def getRun():
     url = 'https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?'
     data = xlrd.open_workbook('C:\\Users\\46362\\Desktop\\test.xlsx')
