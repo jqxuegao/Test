@@ -2,6 +2,7 @@ import requests
 import xlrd
 
 print("hello world")
+print("hello xuegao")
 
 def getRun():
     url = 'https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?'
