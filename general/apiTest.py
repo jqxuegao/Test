@@ -4,7 +4,7 @@ import xlrd
 def getRun():
     url = 'https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?'
     data = xlrd.open_workbook('C:\\Users\\46362\\Desktop\\test.xlsx')
-    table = data.sheets()[0] # 打开第一张表
+    table = data.sheets()[0] # 打开第一张sheet表
     print (table.name) # 获取sheet名称
     print (table.ncols) # 获取总列数
     print (table.nrows) # 获取总行数
