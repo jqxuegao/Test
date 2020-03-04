@@ -18,14 +18,3 @@ def getRun():
         print(response.text)
 
 getRun()
-
-
-
-
-def postRun():
-    url = ''
-    headers = {
-
-
-    }
-    response = requests.post(url,headers)
