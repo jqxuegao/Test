@@ -12,8 +12,7 @@ class connectDB:
 
     def connectDb(self):
         conn = self.pymysql.connect(host=self.host, user=self.user, password=self.password, db=self.db, port=self.port)
-        self.cursor = conn.cursor()
-        self.cursor.execute(self.sql)
+        return conn
 
     def colseDb(self):
         self.cursor.close()
@@ -21,6 +20,8 @@ class connectDB:
         print('关闭')
 
     def select(self):
+        self.cursor = conn.cursor()
+        self.cursor.execute(self.sql)
         self.sql = 'select * from member'
         data1 = self.cursor.fetchone()
         print(data1)
