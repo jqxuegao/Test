@@ -14,7 +14,6 @@ class connectDB:
         conn = self.pymysql.connect(host=self.host, user=self.user, password=self.password, db=self.db, port=self.port)
         return conn
 
-
     def select(self):
         # 调用私有方法：获取数据库连接
         conn = self.connectDb()
@@ -28,10 +27,9 @@ class connectDB:
         # 返回单个的元组，也就是一条记录(row)，如果没有结果 则返回 None
         data1 = cursor.fetchone()
         print(data1)
-
-    def colseDb(self):
-        self.cursor.close()
-        self.conn.close()
+        # 关闭连接·
+        cursor.close()
+        conn.close()
         print('关闭')
 
 test = connectDB()
