@@ -1,6 +1,6 @@
 import xlrd
 
-def doExl():
+def do_exl():
 
     # 打开文件
     data = xlrd.open_workbook(r'C:\Users\46362\Desktop\滴普\test.xls')
@@ -17,4 +17,4 @@ def doExl():
     # 打印
     print("第三行，第二列值:",value1)
 
-doExl()
+do_exl()

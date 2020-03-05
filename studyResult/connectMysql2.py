@@ -10,13 +10,13 @@ class connectDB:
         self.db = 'jqtest'
         self.port = 3306
 
-    def connectDb(self):
+    def connect_db(self):
         conn = self.pymysql.connect(host=self.host, user=self.user, password=self.password, db=self.db, port=self.port)
         return conn
 
     def select(self):
         # 调用私有方法：获取数据库连接
-        conn = self.connectDb()
+        conn = self.connect_db()
         # 使用cursor() 方法创建一个游标对象 cursor
         cursor = conn.cursor()
         # 执行sql语句
