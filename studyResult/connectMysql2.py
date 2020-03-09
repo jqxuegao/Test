@@ -1,5 +1,5 @@
 
-class connectDB:
+class ConnectDB:
 
     import pymysql
 
@@ -32,5 +32,5 @@ class connectDB:
         conn.close()
         print('关闭')
 
-test = connectDB()
+test = ConnectDB()
 test.select()
