@@ -22,7 +22,7 @@ class TestDemo(unittest.TestCase):
         self.assertNotEqual(3,add(2,2))
 
     def test_div(self):
-        self.assertEqual(3,div(3,1))
+        self.assertEqual(3,div(2,1))
         self.assertNotEqual(3,div(2,1))
 
     @unittest.skip('不准备跑')
@@ -32,6 +32,6 @@ class TestDemo(unittest.TestCase):
 
     # 当.py文件被直接运行时，if __name__ == '__main__'之下的代码块将被运行；
     # 当.py文件以模块形式被导入时，if __name__ == '__main__'之下的代码块不被运行。
-    if __name__ == '__main__':
+if __name__ == '__main__':
     # verbosity=*：默认是1；设为0，则不输出每一个用例的执行结果；2-输出详细的执行结果
-        unittest.main(verbosity=1)
+    unittest.main(verbosity=1)
