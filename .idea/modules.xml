@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Test.iml" filepath="$PROJECT_DIR$/.idea/Test.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/TCL/用例及脑图/tcl/.idea/tcl.iml" filepath="$USER_HOME$/Desktop/TCL/用例及脑图/tcl/.idea/tcl.iml" />
     </modules>
   </component>
 </project>

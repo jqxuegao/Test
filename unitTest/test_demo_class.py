@@ -1,5 +1,5 @@
 import unittest
-from demo import add,div
+from unitTest.demo import add,div
 
 class TestDemo(unittest.TestCase):
 
