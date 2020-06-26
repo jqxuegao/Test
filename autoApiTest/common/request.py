@@ -8,12 +8,7 @@ class Request():
     #     self.request_mode = request_mode
     #     self.request_data = request_data
 
-    def request(self,apidata):
-
-        address = apidata['地址']
-        api = apidata['接口']
-        request_mode = apidata['请求方式']
-        request_data = apidata['请求内容']
+    def request(address,api,request_mode,request_data):
 
         if request_mode == 'get':
             re = requests.get(url = address+api,params=request_data)
@@ -26,4 +21,4 @@ class Request():
 
 
 if __name__ == '__main__':
-    Request().request( 'http://10.68.62.22/',  'api/api/v1/user/login',  'post', '{"loginName":"admin", "password":"admin"}')
+    print(Request().request('https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?', 'tel=', 'get', 15521177989.0))

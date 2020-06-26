@@ -1,5 +1,5 @@
 import xlrd
-from autoApiTest.config.readconfig import ReadConfig
+from config.readconfig import ReadConfig
 
 class ReadExcel():
 

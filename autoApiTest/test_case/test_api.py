@@ -1,18 +1,25 @@
-import unittest,ddt
-from autoApiTest.data.data import ReadExcel
-from autoApiTest.common.request import Request
+import sys
+sys.path.append(r'C:\Users\Administrator\PycharmProjects\Test\autoApiTest')
+import pytest
+from data.data import ReadExcel
+from common.request import Request
 
-testData = ReadExcel().read_excel()
 
-@ddt.ddt
-class Api(unittest.TestCase):
 
-    @ddt.data(*testData)
-    def test_1(self,data):
-        # print(data)
-        re = Request().request(data)
-        # print(re)
-        self.assertEquals(re,200)
+def get_course_data():
+    testData = ReadExcel().read_excel()
+    course_data = []
+    for apidata in testData:
+        address = apidata['地址']
+        api = apidata['接口']
+        request_mode = apidata['请求方式']
+        request_data = apidata['请求内容']
+        expected = apidata['断言']
+        course_data.append((address,api,request_mode,request_data,expected))
+    return course_data
 
-if __name__ == '__main__':
-    unittest.main()
+testData = get_course_data()
+
+@pytest.mark.parametrize('address,api,request_mode,request_data,expected',testData)
+def test_api1(address,api,request_mode,request_data,expected):
+    assert Request.request(address,api,request_mode,request_data) == expected
