@@ -1,6 +1,6 @@
 import HTMLReport
 import unittest
-from test_demo_class import TestDemo
+from unitTest.test_demo_class import TestDemo
 
 if __name__ == '__main__':
 

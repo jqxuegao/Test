@@ -1,7 +1,7 @@
-import MySQLdb
+import pymysql
 
 # 链接数据库
-db = MySQLdb.connect(host = '139.159.218.173',port = 3306,db = 'gree-dm-application',user = 'root',passwd = 'my-secret-ab',charset = 'utf8')
+db = pymysql.connect(host = '139.159.218.173',port = 3306,db = 'gree-dm-application',user = 'root',passwd = 'my-secret-ab',charset = 'utf8')
 # 创建游标
 cursor = db.cursor()
 # 查询语句

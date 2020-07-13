@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r'C:\Users\Administrator\PycharmProjects\Test\autoApiTest')
 import xlrd
 from config.readconfig import ReadConfig
 
@@ -24,5 +26,19 @@ class ReadExcel():
         return body_list
 
 
+    def get_course_data(self):
+        testData = self.read_excel()
+        course_data = []
+        for apidata in testData:
+            address = apidata['地址']
+            api = apidata['接口']
+            request_mode = apidata['请求方式']
+            request_data = apidata['请求内容']
+            expected = apidata['断言']
+            course_data.append((address,api,request_mode,request_data,expected))
+        return course_data
+
+
 if __name__ == '__main__':
     print(ReadExcel().read_excel())
+    print(ReadExcel().get_course_data())

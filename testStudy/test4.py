@@ -8,3 +8,4 @@ def excel_one_line_to_list1():
     for s_li in df_li:
         result.append(s_li[0])
     return result
+
