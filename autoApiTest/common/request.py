@@ -21,4 +21,4 @@ class Request():
 
 
 if __name__ == '__main__':
-    print(Request().request('https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?', 'tel=', 'get', 15521177989.0))
+    print(Request().request('https://tcc.taobao.com', '/cc/json/mobile_tel_segment.htm?tel=', 'get', 15521177989.0))
