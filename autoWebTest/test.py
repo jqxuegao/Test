@@ -22,5 +22,7 @@ driver.find_element_by_id('username').send_keys('chenjianqi')
 driver.find_element_by_id('password').send_keys('123456Abc')
 driver.find_element_by_name('submit').click()
 time.sleep(5)
-
+# css选择器 .class
+# 下一层>
+# 第五个元素nth-of-type(5)
 driver.find_element_by_css_selector('.nav>li:nth-of-type(5)').click()
