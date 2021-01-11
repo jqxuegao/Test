@@ -6,7 +6,7 @@ class ReadConfig():
 
     def get_address(self):
         config = configparser.ConfigParser()
-        config.read(r"C:\Users\Administrator\PycharmProjects\Test\autoApiTest\config\config.ini")
+        config.read(r"/Users/xuegao/PycharmProjects/Test1/autoApiTest/config/config.ini")
         value = config.get("EXCEL", "address")
         return value
 

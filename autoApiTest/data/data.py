@@ -1,7 +1,5 @@
-import sys
-sys.path.append(r'C:\Users\Administrator\PycharmProjects\Test\autoApiTest')
 import xlrd
-from config.readconfig import ReadConfig
+from autoApiTest.config.readconfig import ReadConfig
 
 class ReadExcel():
 

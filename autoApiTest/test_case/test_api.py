@@ -1,8 +1,8 @@
-import sys
-sys.path.append(r'C:\Users\Administrator\PycharmProjects\Test\autoApiTest')
+import sys, os
+sys.path.append(os.pardir)
 import pytest
-from data.data import ReadExcel
-from common.request import Request
+from autoApiTest.data.data import ReadExcel
+from autoApiTest.common.request import Request
 
 
 testData = ReadExcel().get_course_data()
